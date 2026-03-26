@@ -1,0 +1,263 @@
+[
+  {
+    "timestamp": 1.0333333333333334,
+    "frame": 31,
+    "type": "congestion",
+    "reason": "车辆过多 (25辆 > 15辆)",
+    "vehicle_count": 25,
+    "avg_speed": 2.0028777865410774,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (25辆 > 15辆)"
+  },
+  {
+    "timestamp": 2.066666666666667,
+    "frame": 62,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.1079637025330582,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 3.1,
+    "frame": 93,
+    "type": "congestion",
+    "reason": "车辆过多 (24辆 > 15辆)",
+    "vehicle_count": 24,
+    "avg_speed": 1.0683744301994773,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (24辆 > 15辆)"
+  },
+  {
+    "timestamp": 4.133333333333334,
+    "frame": 124,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.8233549267111044,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 5.166666666666667,
+    "frame": 155,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 0.8035533905932738,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 6.2,
+    "frame": 186,
+    "type": "congestion",
+    "reason": "车辆过多 (23辆 > 15辆)",
+    "vehicle_count": 23,
+    "avg_speed": 1.4071553331471887,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (23辆 > 15辆)"
+  },
+  {
+    "timestamp": 7.233333333333333,
+    "frame": 217,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.3114514886380533,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 8.266666666666667,
+    "frame": 248,
+    "type": "congestion",
+    "reason": "车辆过多 (24辆 > 15辆)",
+    "vehicle_count": 24,
+    "avg_speed": 1.5851861751393228,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (24辆 > 15辆)"
+  },
+  {
+    "timestamp": 9.3,
+    "frame": 279,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.0430964597342147,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 10.333333333333334,
+    "frame": 310,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.2218922229934865,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 11.366666666666667,
+    "frame": 341,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 1.3015842311451709,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 12.4,
+    "frame": 372,
+    "type": "congestion",
+    "reason": "车辆过多 (18辆 > 15辆)",
+    "vehicle_count": 18,
+    "avg_speed": 1.3109031144654757,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (18辆 > 15辆)"
+  },
+  {
+    "timestamp": 13.433333333333334,
+    "frame": 403,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 1.6970446904515626,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 14.466666666666667,
+    "frame": 434,
+    "type": "congestion",
+    "reason": "车辆过多 (23辆 > 15辆)",
+    "vehicle_count": 23,
+    "avg_speed": 0.9775021005488934,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (23辆 > 15辆)"
+  },
+  {
+    "timestamp": 15.5,
+    "frame": 465,
+    "type": "congestion",
+    "reason": "车辆过多 (21辆 > 15辆)",
+    "vehicle_count": 21,
+    "avg_speed": 1.0337361223572346,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (21辆 > 15辆)"
+  },
+  {
+    "timestamp": 16.533333333333335,
+    "frame": 496,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 1.1753785491087383,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 17.566666666666666,
+    "frame": 527,
+    "type": "congestion",
+    "reason": "车辆过多 (24辆 > 15辆)",
+    "vehicle_count": 24,
+    "avg_speed": 1.7874569472404742,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (24辆 > 15辆)"
+  },
+  {
+    "timestamp": 18.6,
+    "frame": 558,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 1.2940995908199693,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 19.633333333333333,
+    "frame": 589,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 1.5688664524165135,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 20.666666666666668,
+    "frame": 620,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.3228224640173736,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 21.7,
+    "frame": 651,
+    "type": "congestion",
+    "reason": "车辆过多 (24辆 > 15辆)",
+    "vehicle_count": 24,
+    "avg_speed": 1.4925123459080851,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (24辆 > 15辆)"
+  },
+  {
+    "timestamp": 22.733333333333334,
+    "frame": 682,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.205101704255489,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 23.766666666666666,
+    "frame": 713,
+    "type": "congestion",
+    "reason": "车辆过多 (20辆 > 15辆)",
+    "vehicle_count": 20,
+    "avg_speed": 1.3011236500914927,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (20辆 > 15辆)"
+  },
+  {
+    "timestamp": 24.8,
+    "frame": 744,
+    "type": "congestion",
+    "reason": "车辆过多 (21辆 > 15辆)",
+    "vehicle_count": 21,
+    "avg_speed": 1.3128353006819826,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (21辆 > 15辆)"
+  },
+  {
+    "timestamp": 25.833333333333332,
+    "frame": 775,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.6767003382067909,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 26.866666666666667,
+    "frame": 806,
+    "type": "congestion",
+    "reason": "车辆过多 (18辆 > 15辆)",
+    "vehicle_count": 18,
+    "avg_speed": 1.1657257529297613,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (18辆 > 15辆)"
+  },
+  {
+    "timestamp": 27.9,
+    "frame": 837,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.043817729038984,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  },
+  {
+    "timestamp": 28.933333333333334,
+    "frame": 868,
+    "type": "congestion",
+    "reason": "车辆过多 (18辆 > 15辆)",
+    "vehicle_count": 18,
+    "avg_speed": 0.97213741680312,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (18辆 > 15辆)"
+  },
+  {
+    "timestamp": 29.966666666666665,
+    "frame": 899,
+    "type": "congestion",
+    "reason": "车辆过多 (22辆 > 15辆)",
+    "vehicle_count": 22,
+    "avg_speed": 1.494287808946423,
+    "message": "⚠️ 交通拥堵警报！车辆过多 (22辆 > 15辆)"
+  }
+]
