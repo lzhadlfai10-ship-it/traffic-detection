@@ -1,7 +1,5 @@
 # 第三个程序：检测拥堵和事故
 # 文件名：detect_congestion.py
-# 功能：检测交通拥堵，自动报警
-# 最后更新：2026-03-26
 
 from ultralytics import YOLO
 import cv2
@@ -23,8 +21,8 @@ print("   模型加载完成！")
 
 # 第2步：设置视频路径
 video_path = '../videos/traffic.mp4'
-output_path = '../output/congestion_detected.mp4'
-alert_log_path = '../output/alerts.json'
+output_path = '../output/traffic_result_v3.mp4'
+alert_log_path = '../output/alerts_traffic_v3.json'
 
 # 检查视频是否存在
 if not os.path.exists(video_path):
@@ -55,12 +53,11 @@ vehicle_classes = [2, 3, 5, 7]
 class_names = {2: 'car', 3: 'motorcycle', 5: 'bus', 7: 'truck'}
 
 # 第7步：拥堵检测参数
-CONGESTION_THRESHOLD = 15  # 如果当前画面车辆超过15辆，视为拥堵
-SPEED_THRESHOLD = 5        # 如果车辆速度低于5像素/帧，视为慢速
-ALERT_COOLDOWN = 30        # 两次报警之间的最小帧数（避免重复报警）
+CONGESTION_THRESHOLD = 25  # 车辆数阈值
+SPEED_THRESHOLD = 3        # 速度阈值
+ALERT_COOLDOWN = 90        # 报警冷却帧数
 
 # 第8步：记录车辆位置和速度
-# 用字典存储每辆车的上一帧位置和速度
 vehicle_positions = {}
 vehicle_speeds = {}
 
@@ -77,7 +74,6 @@ print("3. 开始分析交通状况...")
 print("   (程序会检测拥堵和事故，自动报警)")
 
 frame_count = 0
-congestion_frames = 0
 
 # 第9步：逐帧处理
 while True:
@@ -112,24 +108,19 @@ while True:
             for i in range(len(detections)):
                 tracker_id = int(detections.tracker_id[i]) if detections.tracker_id is not None else None
                 if tracker_id is not None:
-                    # 获取当前车辆中心点
                     x1, y1, x2, y2 = detections.xyxy[i]
                     center_x = int((x1 + x2) / 2)
                     center_y = int((y1 + y2) / 2)
                     
-                    # 如果之前记录过这辆车的位置，计算速度
                     if tracker_id in vehicle_positions:
                         prev_x, prev_y = vehicle_positions[tracker_id]
-                        # 计算移动距离（欧氏距离）
                         distance = np.sqrt((center_x - prev_x)**2 + (center_y - prev_y)**2)
-                        speed = distance  # 每帧移动的像素距离
+                        speed = distance
                         speeds.append(speed)
                         vehicle_speeds[tracker_id] = speed
                     
-                    # 更新位置
                     vehicle_positions[tracker_id] = (center_x, center_y)
             
-            # 计算平均速度
             if speeds:
                 avg_speed = sum(speeds) / len(speeds)
                 speed_history.append(avg_speed)
@@ -144,34 +135,34 @@ while True:
                 if tid in vehicle_speeds:
                     del vehicle_speeds[tid]
         
-        # ========== 拥堵检测 ==========
+        # ========== 拥堵检测（改进版） ==========
         is_congested = False
         congestion_reason = ""
         
-        # 条件1：车辆数量过多
+        # 条件1：车辆数量过多（直接拥堵）
         if current_vehicle_count > CONGESTION_THRESHOLD:
             is_congested = True
-            congestion_reason = f"车辆过多 ({current_vehicle_count}辆 > {CONGESTION_THRESHOLD}辆)"
+            congestion_reason = f"拥堵：车辆过多 ({current_vehicle_count}辆 > {CONGESTION_THRESHOLD}辆)"
         
-        # 条件2：平均速度过慢
-        elif avg_speed < SPEED_THRESHOLD and avg_speed > 0:
+        # 条件2：车辆数量中等且速度过慢
+        elif current_vehicle_count > 10 and avg_speed < SPEED_THRESHOLD and avg_speed > 0:
             is_congested = True
-            congestion_reason = f"车速过慢 ({avg_speed:.1f}像素/帧 < {SPEED_THRESHOLD}像素/帧)"
+            congestion_reason = f"拥堵：{current_vehicle_count}辆车，车速过慢 ({avg_speed:.1f}像素/帧)"
         
-        # ========== 事故检测（静止车辆） ==========
+        # ========== 事故检测（静止车辆）- 改进版 ==========
         accident_detected = False
         stationary_vehicles = []
         
         for tracker_id, speed in vehicle_speeds.items():
-            # 如果车辆速度接近0超过一段时间，可能是事故
             if speed < 1:
                 stationary_vehicles.append(tracker_id)
         
-        if len(stationary_vehicles) > 5:  # 如果超过5辆车静止
+        # 同时满足：静止车辆多 AND 总车辆数多，才报警
+        if len(stationary_vehicles) > 8 and current_vehicle_count > 15:
             accident_detected = True
         
         # ========== 报警处理 ==========
-        current_time = frame_count / fps  # 转换为秒
+        current_time = frame_count / fps
         
         if is_congested and (frame_count - last_alert_frame) > ALERT_COOLDOWN:
             alert = {
@@ -181,7 +172,7 @@ while True:
                 "reason": congestion_reason,
                 "vehicle_count": current_vehicle_count,
                 "avg_speed": avg_speed,
-                "message": f"⚠️ 交通拥堵警报！{congestion_reason}"
+                "message": f"🚨 交通拥堵警报！{congestion_reason}"
             }
             alerts.append(alert)
             last_alert_frame = frame_count
@@ -191,7 +182,6 @@ while True:
                 congestion_start_frame = frame_count
                 congestion_alert_active = True
         elif not is_congested and congestion_alert_active:
-            # 拥堵结束
             congestion_end_frame = frame_count
             duration = (congestion_end_frame - congestion_start_frame) / fps
             alert = {
@@ -218,7 +208,6 @@ while True:
             print(f"   🚨 第{frame_count}帧：{alert['message']}")
         
         # ========== 在画面上标注 ==========
-        # 画框和标签
         box_annotator = sv.BoxAnnotator()
         label_annotator = sv.LabelAnnotator()
         
@@ -278,10 +267,14 @@ print(f"报警日志保存在：{alert_log_path}")
 print(f"结果视频保存在：{output_path}")
 print("=" * 60)
 
-# 打印详细报警记录
 if alerts:
     print("\n报警记录：")
     for alert in alerts:
-        print(f"  [{alert['timestamp']:.1f}秒] {alert['message']}")
+        if alert['type'] == 'congestion':
+            print(f"  [{alert['timestamp']:.1f}秒] ▲ {alert['message']}")
+        elif alert['type'] == 'congestion_end':
+            print(f"  [{alert['timestamp']:.1f}秒] ▼ {alert['message']}")
+        elif alert['type'] == 'accident':
+            print(f"  [{alert['timestamp']:.1f}秒] ✖ {alert['message']}")
 
 input("\n按回车键退出...")

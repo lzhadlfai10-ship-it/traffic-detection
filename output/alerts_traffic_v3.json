@@ -1,0 +1,99 @@
+[
+  {
+    "timestamp": 3.033333333333333,
+    "frame": 91,
+    "type": "congestion",
+    "reason": "拥堵：车辆过多 (26辆 > 25辆)",
+    "vehicle_count": 26,
+    "avg_speed": 1.1664192548923984,
+    "message": "🚨 交通拥堵警报！拥堵：车辆过多 (26辆 > 25辆)"
+  },
+  {
+    "timestamp": 6.066666666666666,
+    "frame": 182,
+    "type": "congestion",
+    "reason": "拥堵：22辆车，车速过慢 (1.1像素/帧)",
+    "vehicle_count": 22,
+    "avg_speed": 1.098301604604174,
+    "message": "🚨 交通拥堵警报！拥堵：22辆车，车速过慢 (1.1像素/帧)"
+  },
+  {
+    "timestamp": 9.1,
+    "frame": 273,
+    "type": "congestion",
+    "reason": "拥堵：20辆车，车速过慢 (1.6像素/帧)",
+    "vehicle_count": 20,
+    "avg_speed": 1.562283505285556,
+    "message": "🚨 交通拥堵警报！拥堵：20辆车，车速过慢 (1.6像素/帧)"
+  },
+  {
+    "timestamp": 10.733333333333333,
+    "frame": 322,
+    "type": "congestion_end",
+    "duration_seconds": 7.7,
+    "message": "✅ 拥堵解除，持续了 7.7 秒"
+  },
+  {
+    "timestamp": 12.133333333333333,
+    "frame": 364,
+    "type": "congestion",
+    "reason": "拥堵：20辆车，车速过慢 (1.5像素/帧)",
+    "vehicle_count": 20,
+    "avg_speed": 1.517747059841649,
+    "message": "🚨 交通拥堵警报！拥堵：20辆车，车速过慢 (1.5像素/帧)"
+  },
+  {
+    "timestamp": 15.166666666666666,
+    "frame": 455,
+    "type": "congestion",
+    "reason": "拥堵：22辆车，车速过慢 (0.8像素/帧)",
+    "vehicle_count": 22,
+    "avg_speed": 0.8370346751529457,
+    "message": "🚨 交通拥堵警报！拥堵：22辆车，车速过慢 (0.8像素/帧)"
+  },
+  {
+    "timestamp": 18.2,
+    "frame": 546,
+    "type": "congestion",
+    "reason": "拥堵：22辆车，车速过慢 (1.4像素/帧)",
+    "vehicle_count": 22,
+    "avg_speed": 1.3892258456682791,
+    "message": "🚨 交通拥堵警报！拥堵：22辆车，车速过慢 (1.4像素/帧)"
+  },
+  {
+    "timestamp": 21.233333333333334,
+    "frame": 637,
+    "type": "congestion",
+    "reason": "拥堵：19辆车，车速过慢 (1.4像素/帧)",
+    "vehicle_count": 19,
+    "avg_speed": 1.390839142205651,
+    "message": "🚨 交通拥堵警报！拥堵：19辆车，车速过慢 (1.4像素/帧)"
+  },
+  {
+    "timestamp": 24.266666666666666,
+    "frame": 728,
+    "type": "congestion",
+    "reason": "拥堵：20辆车，车速过慢 (1.2像素/帧)",
+    "vehicle_count": 20,
+    "avg_speed": 1.186067467586918,
+    "message": "🚨 交通拥堵警报！拥堵：20辆车，车速过慢 (1.2像素/帧)"
+  },
+  {
+    "timestamp": 27.3,
+    "frame": 819,
+    "type": "congestion",
+    "reason": "拥堵：20辆车，车速过慢 (1.2像素/帧)",
+    "vehicle_count": 20,
+    "avg_speed": 1.1616672736016929,
+    "message": "🚨 交通拥堵警报！拥堵：20辆车，车速过慢 (1.2像素/帧)"
+  },
+  {
+    "timestamp": 30.333333333333332,
+    "frame": 910,
+    "type": "congestion",
+    "reason": "拥堵：22辆车，车速过慢 (1.5像素/帧)",
+    "vehicle_count": 22,
+    "avg_speed": 1.5160584038017058,
+    "message": "🚨 交通拥堵警报！拥堵：22辆车，车速过慢 (1.5像素/帧)"
+  }
+]

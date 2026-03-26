@@ -29,7 +29,7 @@ print("交通流量分析报告生成程序")
 print("=" * 60)
 
 # 第1步：读取报警日志
-alert_log_path = '../output/alerts.json'
+alert_log_path = '../output/alerts_traffic_v3.json'
 report_path = '../output/traffic_report.xlsx'
 simulation_log_path = '../output/simulation_log.txt'
 
